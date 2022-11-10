@@ -6,3 +6,86 @@ spec:
   type: service
   owner: user:guest
   lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: Backend Infra
+  title:
+  description: Backend Infra Domain
+  labels: 
+    Organization: Traveloka
+    Vertical: Infra Platforms
+    Product-Domain-Name: Common Backend
+    Cost-Center: TO100
+    Profit-Center: SS
+    PIC_1_Name: Andy Saputra
+    PIC_1_Email: andy@traveloka.com
+    PIC_2_Name: Mohammad Fajrin Azis
+    PIC_2_Email: fajrin@traveloka.com
+    SPICs: Jose Dalino
+spec:
+  owner: Backend Infra Team
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: Common Backend
+  title:
+  description: Cloud Infra Domain
+  labels: 
+    Organization: Traveloka
+    Vertical: Infra Platforms
+    Product-Domain-Name: Infrastructure Platform
+    Cost-Center: TO100
+    Profit-Center: SS
+    PIC_1_Name: Darwin Wirawan
+    PIC_1_Email: dwirawan@traveloka.com
+    PIC_2_Name: Andi Muhammad Muqsith Ashari
+    PIC_2_Email: andi.ashari@traveloka.com
+    SPICs: Jose Dalino
+spec:
+  owner: Cloud Infra Team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Backend Infra Team
+  description: We exist to empower backend engineers so they can build quality products that support Traveloka’s business
+  links:
+    - url: https://29022131.atlassian.net/wiki/spaces/ENG/pages/1308822314/BEI+Backend+Engineering+Team
+      title: BEI - Backend Engineering Team Confluence Page
+    - url: https://29022131.atlassian.net/browse/BEI
+      title: Backend Infra Jira Board
+spec:
+  type: team
+  profile:
+    name: Backend Infra
+    email: backend-infra@traveloka.com
+    slack-group: "@backend-infra-eng"
+    slack-channel: "#backend"
+  parent: Infra Platforms
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Cloud Infra Team
+  description: To help product teams build the secure, reliable, scalable, maintainable, yet cost-effective infrastructure needed to achieve Traveloka's vision, while constantly improving our knowledge and skills in the field of Cloud Engineering.
+  links:
+    - url: https://29022131.atlassian.net/wiki/spaces/ENG/pages/2281635872/Complicated+Subsystem+Teams
+      title: TSI - Cloud Infra Team Confluence Page
+    - url: https://29022131.atlassian.net/servicedesk/customer/portal/11
+      title: Tech-Ops Service Desk
+    - url: https://29022131.atlassian.net/jira/servicedesk/projects/TOSD
+      title: Cloud Infra Jira Board
+    - url: https://traveloka.pagerduty.com/teams/P0V6XRH
+      title: Cloud Infra Pagerduty Oncall Schedule
+spec:
+  type: team
+  profile:
+    name: Cloud Infra
+    email: site-infra@traveloka.com
+    slack-group: "@site-infra"
+    slack-channel: "#site-infra-channel"
+  parent: Infra Platforms
+  children: []
